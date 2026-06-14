@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo TTTN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="loader-box">
+            <i class="fa-solid fa-spinner fa-spin loader-icon"></i>
+            <span id="loading-text">Đang tối ưu hóa tài liệu...</span>
+        </div>
+    </div>
+
+    <div class="app-container">
+        
+        <div class="book-workspace">
+            <button class="nav-btn prev-btn" id="btn-prev" title="Trang trước">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="zoom-container" id="zoom-area">
+                <div class="book-wrapper">
+                    <div id="book" class="flipbook"></div>
+                </div>
+            </div>
+
+            <button class="nav-btn next-btn" id="btn-next" title="Trang sau">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="bottom-toolbar">
+            <div class="toolbar-group pagination-group">
+                <button class="tool-btn" id="btn-first" title="Về trang đầu"><i class="fa-solid fa-angles-left"></i></button>
+                <div class="page-input-container">
+                    <span>Trang</span>
+                    <input type="number" id="input-page" min="1" value="1">
+                    <span id="total-pages-text">/ --</span>
+                </div>
+                <button class="tool-btn" id="btn-last" title="Đến trang cuối"><i class="fa-solid fa-angles-right"></i></button>
+            </div>
+            
+            <div class="toolbar-divider"></div>
+
+            <div class="toolbar-group">
+                <button class="tool-btn" id="btn-zoom-out" title="Thu nhỏ"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                <span class="zoom-indicator" id="zoom-text">100%</span>
+                <button class="tool-btn" id="btn-zoom-in" title="Phóng to"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                <button class="tool-btn" id="btn-zoom-reset" title="Kích thước chuẩn"><i class="fa-solid fa-rotate-left"></i></button>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <div class="toolbar-group">
+                <button class="tool-btn" id="btn-fullscreen" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
